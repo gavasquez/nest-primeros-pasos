@@ -7,7 +7,7 @@ import { UpdateCarDto, CreateCarDto } from './dto';
 export class CarsService {
 
   private cars: Car[] = [
-    {
+    /* {
       id: uuid(),
       brand: 'Toyota',
       model: 'Corolla'
@@ -21,7 +21,7 @@ export class CarsService {
       id: uuid(),
       brand: 'Jeep',
       model: 'Cherokee'
-    }
+    } */
   ];
 
   findAll(){
@@ -72,5 +72,10 @@ export class CarsService {
       ok: true,
       message: 'Car eliminado'
     };
+  }
+
+  fillCardsWithSeedData(cars: Car[]){
+    this.cars = cars;
+    console.log(this.cars);
   }
 }
